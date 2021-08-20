@@ -42,7 +42,7 @@ class _MyHomeState extends State<MyHome> {
               onDismissed: (direction){
                   setState(() {
                     items.removeAt(index);
-                  }); //setState is compulsory as to avoid RangeError , and
+                  }); // Using setState so that ListView gets rebuild and avoid Range Error.
                   Scaffold.of(context).showSnackBar(new SnackBar(
                       content: Text("ITEM IS SUCCESSFULLY REMOVED")));
               },
